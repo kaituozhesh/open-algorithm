@@ -4,6 +4,8 @@ import com.open.ityizhan.sort.Sort;
 import com.open.ityizhan.sort.SortUtility;
 
 /**
+ * 图例文档：https://www.processon.com/view/link/6371f3aff346fb2b797f9f18
+ *
  * @ClassName : BubbleSort01
  * @Description :
  * @Author : 林俊豪
