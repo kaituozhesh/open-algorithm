@@ -1,5 +1,14 @@
 package com.open.ityizhan.sort;
 
+import com.open.ityizhan.sort.bubble.BubbleSort01;
+import com.open.ityizhan.sort.bubble.BubbleSort02;
+import com.open.ityizhan.sort.bubble.BubbleSort03;
+import com.open.ityizhan.sort.insert.InsertSort01;
+import com.open.ityizhan.sort.insert.InsertSort02;
+import com.open.ityizhan.sort.merge.*;
+import com.open.ityizhan.sort.select.SelectSort01;
+import com.open.ityizhan.sort.select.SelectSort02;
+import com.open.ityizhan.sort.shell.ShellSort;
 import com.sun.javafx.collections.SortHelper;
 
 import java.util.HashMap;
@@ -22,6 +31,23 @@ public class SortUtility {
     private static final Map<String, Sort> sortMap = new HashMap<>();
 
     static {
+        sortMap.put("BubbleSort01", new BubbleSort01());
+        sortMap.put("BubbleSort02", new BubbleSort02());
+        sortMap.put("BubbleSort03", new BubbleSort03());
+
+        sortMap.put("SelectSort01", new SelectSort01());
+        sortMap.put("SelectSort02", new SelectSort02());
+
+        sortMap.put("InsertSort01", new InsertSort01());
+        sortMap.put("InsertSort02", new InsertSort02());
+
+        sortMap.put("ShellSort", new ShellSort());
+
+        sortMap.put("MergeSort01", new MergeSort01());
+        sortMap.put("MergeSort02", new MergeSort02());
+        sortMap.put("MergeSort03", new MergeSort03());
+        sortMap.put("MergeSort04", new MergeSort04());
+        sortMap.put("MergeSort05", new MergeSort05());
     }
 
     /**
