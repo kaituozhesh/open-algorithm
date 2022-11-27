@@ -17,24 +17,17 @@ public class BinarySearch {
     }
 
     public static int search(int[] arr, int num) {
-
-        if (arr.length == 0) {
-            throw new IllegalArgumentException("Arr is empty");
-        }
-        int l = 0;
-        int r = arr.length - 1;
-        int mid = l + (r - l) / 2;
-        while (true) {
-            if (l > r) return -1;
+        int l = 0, r = arr.length - 1, mid;
+        while (l <= r) {
+            mid = l + (r - l) / 2;
             if (arr[mid] == num) {
                 return mid;
             } else if (arr[mid] > num) {
                 r = mid - 1;
-                mid = l + (r - l) / 2;
             } else {
                 l = mid + 1;
-                mid = l + (r - l) / 2;
             }
         }
+        return -1;
     }
 }
