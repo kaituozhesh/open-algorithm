@@ -24,8 +24,11 @@ public class BinarySearch {
         int l = 0;
         int r = arr.length - 1;
         int mid = l + (r - l) / 2;
-        while (arr[mid] != num) {
-            if (arr[mid] > num) {
+        while (true) {
+            if (l > r) return -1;
+            if (arr[mid] == num) {
+                return mid;
+            } else if (arr[mid] > num) {
                 r = mid - 1;
                 mid = l + (r - l) / 2;
             } else {
@@ -33,6 +36,5 @@ public class BinarySearch {
                 mid = l + (r - l) / 2;
             }
         }
-        return mid;
     }
 }
