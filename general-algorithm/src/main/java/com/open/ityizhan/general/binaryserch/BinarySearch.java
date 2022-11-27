@@ -18,12 +18,29 @@ public class BinarySearch {
 
     public static int search(int[] arr, int num) {
         int l = 0, r = arr.length - 1, mid;
+        // 在 arr[ l , r ] 的范围中查找 num
         while (l <= r) {
             mid = l + (r - l) / 2;
             if (arr[mid] == num) {
                 return mid;
             } else if (arr[mid] > num) {
                 r = mid - 1;
+            } else {
+                l = mid + 1;
+            }
+        }
+        return -1;
+    }
+
+    public static int search2(int[] arr, int num) {
+        int l = 0, r = arr.length, mid;
+        // 在 arr[ l , r ) 的范围中查找 num
+        while (l < r) {
+            mid = l + (r - l) / 2;
+            if (arr[mid] == num) {
+                return mid;
+            } else if (arr[mid] > num) {
+                r = mid;
             } else {
                 l = mid + 1;
             }
