@@ -11,6 +11,10 @@ package com.open.ityizhan.general.recursion;
  */
 public class SumArray {
 
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4};
+        System.out.println(sum(nums));
+    }
 
     public static int sum(int[] arr) {
         return sum(arr, 0);
